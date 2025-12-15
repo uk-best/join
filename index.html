@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ArcadeHub – Free Online Arcade Games</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .home-anim{position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,#ffffff,#fafafa)}
+    .home-anim canvas{width:100%;height:100%}
+  </style>
+</head><body>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="index.html" aria-label="ArcadeHub home">
+      <img src="assets/logo.svg" alt="ArcadeHub logo">
+    </a>
+    <button class="nav-toggle" aria-label="Menu">☰</button>
+    <nav class="nav" aria-label="Primary" aria-expanded="false">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="games/index.html">Games</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="hero">
+  <div class="wrap">
+    <h1>Welcome to ArcadeHub!</h1>
+    <p class="sub">Instant-play arcade classics. Free, fun, and right in your browser.</p>
+    <a class="cta" href="games/index.html">Browse Games</a>
+  </div>
+</section>
+<div class="home-anim"><canvas id="homebg"></canvas></div>
+
+<main class="wrap">
+
+  <section class="section" id="popular">
+    <div class="panel">
+      <h2 class="h2">Popular Now</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="https://www.sify.com/wp-content/uploads/2022/09/snake_game_1200x574.gif" alt="Snake">
+          <div class="body">
+            <div class="row"><strong>Snake</strong><span class="badge">Popular</span></div>
+            <a class="cta" href="games/snake.html" style="margin-top:.5rem;display:inline-block;">Play Now</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://edictalarcon.law.blog/wp-content/uploads/2018/10/alarcon_brick-game.gif" alt="Brick Breaker">
+          <div class="body">
+            <div class="row"><strong>Brick Breaker</strong><span class="badge">Popular</span></div>
+            <a class="cta" href="games/breakout.html" style="margin-top:.5rem;display:inline-block;">Play Now</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="why">
+    <div class="grid">
+      <article class="panel">
+        <h2 class="h2">Why ArcadeHub?</h2>
+        <p>Tired of lengthy downloads, mandatory accounts, and games that track your every move? So were we. ArcadeHub was built as an antidote to modern gaming frustrations. We offer pure, classic fun that's always free and respects your privacy. Your <strong>best scores are saved locally</strong> on your device, meaning you—and only you—are in control of your data.</p>
+        <ul>
+          <li>⚡ Instant play in your browser</li>
+          <li>💾 Private high scores saved on your device</li>
+          <li>🎮 A curated collection of timeless classics</li>
+          <li>🛡️ A privacy-first platform by design</li>
+        </ul>
+        <a class="cta" href="games/index.html">Browse All Games</a>
+      </article>
+      <aside class="panel">
+        <h3 class="h3">Leaderboard Preview (Local)</h3>
+        <div id="miniBoard" class="small"></div>
+        <button class="cta ghost" id="clearMini" style="margin-top:8px;">Clear Local Scores</button>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section" id="features">
+    <div class="panel">
+      <h2 class="h2">Features</h2>
+      <div class="cards">
+        <article class="card"><img src="https://onlinegiftools.com/images/examples-onlinegiftools/drop-of-liquid-slowdown-the-middle.gif" alt="Performance"><div class="body"><strong>Fast & Lightweight</strong><p class="small">Our games are built with clean, efficient HTML5. This means they load almost instantly and run smoothly even on older hardware, without draining your battery.</p></div></article>
+        <article class="card"><img src="https://cdn.dribbble.com/userupload/35415584/file/original-dda9f85d8ef606b6e335797ce8b8f6bf.gif" alt="Privacy by Design"><div class="body"><strong>Privacy by Design</strong><p class="small">We don't need your data. High scores are stored using your browser's LocalStorage, keeping them private to you. We use minimal, anonymous analytics to improve the site, never to track you.</p></div></article>
+        <article class="card"><img src="https://i.pinimg.com/originals/2a/f0/0b/2af00b77b9831ccf199a7360d8d4d39f.gif" alt="Responsive"><div class="body"><strong>Play Anywhere</strong><p class="small">Whether you're on a desktop with a large monitor or on your phone during your commute, our responsive design ensures a great gaming experience everywhere.</p></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="testimonials">
+    <div class="grid">
+      <div class="panel">
+        <h2 class="h2">Players Say</h2>
+        <blockquote>“ArcadeHub is my go-to for a quick gaming break. Simple, fast, and fun.” — <em>Alex</em></blockquote>
+        <blockquote>“I love that it’s just clean, classic games without any distractions.” — <em>Maya</em></blockquote>
+        <blockquote>“The local high score feature is a great touch. I'm always trying to beat my own record!” — <em>Jordan</em></blockquote>
+      </div>
+      <div class="panel">
+        <h2 class="h2">FAQ</h2>
+        <p><strong>Do I need an account?</strong><br>No. Just open a game and start playing instantly.</p>
+        <p><strong>Where are my scores saved?</strong><br>Scores are stored locally in your browser's <code>LocalStorage</code>. This means your data stays on your device. You can clear your scores anytime from the "All Games" or "Stats" pages.</p>
+        <p><strong>Is it really free?</strong><br>Yes, 100% free. We are a passion project dedicated to providing quality entertainment without cost. There is no real-money gambling or pay-to-win mechanics on our site.</p>
+        <p><strong>Can you add [X] game?</strong><br>We're always open to suggestions! Use our contact form to recommend a classic game you'd love to see on ArcadeHub. We focus on games that are lightweight and work well on the web.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cta">
+    <div class="panel" style="text-align:center">
+      <h2 class="h2">Jump into the Arcade</h2>
+      <p class="small">Ready to set a new high score?</p>
+      <a class="cta" href="games/index.html">Play Free Games</a>
+    </div>
+  </section>
+
+</main>
+
+
+<footer class="footer">
+  <div class="wrap cols" style="align-items:flex-start">
+    <div style="min-width:220px">
+      <div class="small"><strong>ArcadeHub</strong><br>Play free HTML5 games. Scores saved locally on your device.</div>
+      <div class="small" style="margin-top:6px;">© <span id="year">2025</span> ArcadeHub. All rights reserved.</div>
+    </div>
+    <div>
+      <div class="small"><strong>Platform</strong></div>
+      <ul style="list-style:none;padding:0;margin:.4rem 0 0 0;display:grid;gap:6px">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="games/index.html">Games</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="small"><strong>Legal</strong></div>
+      <ul style="list-style:none;padding:0;margin:.4rem 0 0 0;display:grid;gap:6px">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="dmca.html">DMCA</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+<script src="script.js" type="module"></script>
+<script src="privacy-popup.js" defer></script>
+
+
+<script>
+// HOME creative: floating balloons + sparkles + click to pop (confetti)
+const hb=document.getElementById('homebg'); if(hb){
+  const ctx=hb.getContext('2d'); let W,H; function rs(){hb.width=innerWidth; hb.height=innerHeight; W=hb.width; H=hb.height;} addEventListener('resize', rs); rs();
+  const balloons = Array.from({length:16}, ()=>({x:Math.random()*W, y:H+Math.random()*H, r:14+Math.random()*18, hue:Math.floor(Math.random()*360), spd:0.4+Math.random()*0.9, phase:Math.random()*Math.PI*2}));
+  const spark = Array.from({length:50}, ()=>({x:Math.random()*W, y:Math.random()*H*0.5, v:0.2+Math.random()*0.7}));
+  const confetti=[];
+  function pop(x,y){
+    for(let i=0;i<40;i++) confetti.push({x,y, vx:(Math.random()-0.5)*5, vy:(Math.random()-0.5)*5, life:50+Math.random()*30, hue:Math.floor(Math.random()*360)});
+  }
+  hb.addEventListener('click', e=>{
+    const r=hb.getBoundingClientRect(); const x=e.clientX-r.left, y=e.clientY-r.top;
+    // pop nearest balloon
+    let idx=-1, best=1e9; balloons.forEach((b,i)=>{ const d=(b.x-x)**2+(b.y-y)**2; if(d<best){best=d; idx=i;}});
+    if(idx>=0 && Math.sqrt(best)<40){ pop(balloons[idx].x, balloons[idx].y); balloons[idx].y = H + 40; }
+  });
+  function draw(){
+    const g=ctx.createLinearGradient(0,0,0,H); g.addColorStop(0,'#ffffff'); g.addColorStop(1,'#f8fafc'); ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+    // sparkles drift
+    ctx.fillStyle='#e5e7eb'; spark.forEach(s=>{ s.x+=s.v*0.2; if(s.x>W) s.x=0; ctx.beginPath(); ctx.arc(s.x,s.y,1.4,0,Math.PI*2); ctx.fill(); });
+    // balloons
+    balloons.forEach(b=>{
+      b.y -= b.spd; b.x += Math.sin((b.y+b.phase)/50)*0.6; if(b.y<-50){ b.y=H+Math.random()*80; b.x=Math.random()*W; }
+      ctx.fillStyle='hsl('+b.hue+',80%,65%)'; ctx.beginPath(); ctx.ellipse(b.x,b.y,b.r*0.8,b.r,0,0,Math.PI*2); ctx.fill();
+      ctx.strokeStyle='rgba(0,0,0,.06)'; ctx.beginPath(); ctx.moveTo(b.x, b.y+b.r); ctx.lineTo(b.x, b.y+b.r+18); ctx.stroke();
+    });
+    // confetti
+    confetti.forEach(p=>{ p.x+=p.vx; p.y+=p.vy; p.vy+=0.05; p.life--; ctx.fillStyle='hsl('+p.hue+',80%,60%)'; ctx.fillRect(p.x,p.y,3,3); });
+    for(let i=confetti.length-1;i>=0;i--) if(confetti[i].life<=0) confetti.splice(i,1);
+    requestAnimationFrame(draw);
+  } draw();
+}
+</script>
+</body></html>
